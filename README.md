@@ -1,7 +1,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/natuleadan/.github/main/profile/assets/banners/caelum.svg" alt="Caelum Constellation" width="100%" /></p>
 
 <h1 align="center">Caelum</h1>
-<p align="center"><strong>Sovereign spatial physics and tactile perception engine in pure Rust</strong></p>
+<p align="center"><strong>Sovereign physical-world interaction, tactile perception, and full-body robotic motor coordination engine in pure Rust</strong></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Rust_2024-orange?style=flat" alt="Rust 2024" />
@@ -14,13 +14,13 @@
 
 ## 1. What is Caelum?
 
-Caelum is a sovereign, pure-Rust physical-world interaction, tactile perception, and **spatial physics and tactile perception engine** built for autonomous agents. Built on deterministic spatial contracts and multi-hardware compatibility layers, Caelum lets agents sense force, contact and spatial state—communicating with sibling constellations strictly over decoupled network protocols (REST, WebSocket/WSS, gRPC) without direct Cargo coupling.
+Caelum is a sovereign, pure-Rust physical-world interaction, tactile perception, and **full-body robotic motor coordination engine** built for autonomous agents. Designed with a modular entity-component architecture, deterministic spatial contracts, and multi-hardware compatibility layers across diverse chips and actuators, Caelum lets agents sense force, contact, and spatial state while coordinating physical movement—communicating with sibling constellations strictly over decoupled network protocols (REST, WebSocket/WSS, gRPC) without direct Cargo coupling.
 
 ### What is inside
 
 Caelum implements a layered six-file modular domain layout (`entity`, `dto`, `repository`, `service`, `controller`, `mod`) atop a pure-Cargo workspace (`crates/core` and `crates/xtask`), governed by eight native validation gates and a 3-day dependency cooldown.
 
-> **Current scope:** This release ships the native validation harness, the six-file modular reference domain (`modules/math`), and the crate contracts. Transports, sandboxes, domain engines and protocol integrations described below are planned milestones, not shipped capabilities.
+> **Current scope:** This release ships the native validation harness, the six-file modular reference domain (`modules/math`), and the crate contracts. Transports, sandboxes, domain engines and protocol integrations described throughout this document are planned milestones, not shipped capabilities.
 
 ## 2. Why Caelum?
 
@@ -66,7 +66,7 @@ cargo test --workspace       # Execute unit, integration, and architecture tests
 ## 5. Use Cases
 
 - **Tactile agent feedback**: Translate physical sensor arrays and force-feedback actuators into structured spatial events for Pulsar agents.
-- **Physical-world digital twins**: Maintain deterministic collision and spatial state models exposed to Pulsar and authorized consumers.
+- **Physical-world digital twins**: Maintain deterministic collision and spatial state models synchronized with Pleaides robotic mobility.
 - **Multi-device edge simulation**: Run lightweight spatial ticks across Linux servers and embedded controllers.
 
 ## 6. How It Works
@@ -77,7 +77,7 @@ sequenceDiagram
     participant Ctrl as Spatial Controller
     participant Svc as Tactile Physics Service
     participant Repo as World State Repo
-    participant Agent as Pulsar
+    participant Agent as Pulsar / Pleaides
 
     Sensor->>Ctrl: streamContactReading(dto)
     Ctrl->>Ctrl: validateBounds(dto)
@@ -95,7 +95,7 @@ Hardware contact readings enter through the `controller`, validate safety bounds
 - **Status**: Initial foundation — validation harness and modular reference skeleton in place; domain implementation in progress.
 - **Milestone 1**: Core ECS-inspired spatial world, tactile event schemas, and deterministic tick scheduler.
 - **Milestone 2**: Hardware-agnostic force/contact sensor traits and collision envelope solvers.
-- **Milestone 3**: Decoupled wire-protocol (REST, WSS, gRPC) bridges for Pulsar harnesses and authorized consumers.
+- **Milestone 3**: Decoupled wire-protocol (REST, WSS, gRPC) bridges for Pleaides robotics and Pulsar harnesses.
 
 ## 8. Repository Layout & Validation Gates
 
@@ -140,7 +140,7 @@ Hardware contact readings enter through the `controller`, validate safety bounds
 
 ## 10. Ecosystem & Community
 
-Caelum is the spatial physics and tactile perception constellation of Natuleadan—communicating over decoupled wire protocols (REST, WSS, gRPC) with Orion, Andromeda, Aurora, Pleaides, Pulsar, Lyra (acoustic perception), and Skills.
+Caelum is the physical-world, tactile perception, and full-body robotic motor coordination constellation of Natuleadan—communicating over decoupled wire protocols (REST, WSS, gRPC) with Orion, Andromeda, Aurora, Pleaides, Pulsar, Lyra (multimodal sensory perception), and Skills.
 
 <p align="left">
   <a href="https://github.com/natuleadan"><img src="https://avatars.githubusercontent.com/u/287601518?v=4&s=48" width="48" height="48" alt="natuleadan" title="natuleadan"/></a>
