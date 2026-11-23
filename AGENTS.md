@@ -4,7 +4,7 @@ Technical operating rules for this Rust repository.
 
 ## 1. Repository Scope
 
-- Spatial physics and tactile perception engine (`caelum-core`).
+- Physical-world interaction, tactile perception, and full-body robotic motor coordination engine (`caelum-core`).
 - Pure-Cargo workspace (`crates/core` library + `crates/xtask` automation runner); no Node.js or Python runtime tooling (`package.json`, `pnpm-lock.yaml`, `husky`, `.prettierrc` are forbidden).
 
 ## 2. Toolchain & Validation
